@@ -1,0 +1,77 @@
+{
+  "url": "http://localhost:5174",
+  "at": "2026-11-10T07:04:55.975Z",
+  "results": [
+    {
+      "step": "landing page shows live backend status",
+      "ok": true,
+      "ms": 12381
+    },
+    {
+      "step": "create project",
+      "ok": true,
+      "ms": 7122
+    },
+    {
+      "step": "configure: load stage-1 designs A/B/C and evaluate all",
+      "ok": true,
+      "ms": 6086
+    },
+    {
+      "step": "wizard: walk the steps and evaluate",
+      "ok": true,
+      "ms": 5444
+    },
+    {
+      "step": "cell selection shows provenance and missing data",
+      "ok": true,
+      "ms": 7592
+    },
+    {
+      "step": "series-parallel live sizing",
+      "ok": true,
+      "ms": 9289
+    },
+    {
+      "step": "run electrical simulation",
+      "ok": true,
+      "ms": 17560
+    },
+    {
+      "step": "thermal analysis + current sweep",
+      "ok": true,
+      "ms": 7576
+    },
+    {
+      "step": "identify safety warnings (design B)",
+      "ok": true,
+      "ms": 4760
+    },
+    {
+      "step": "mechanical packaging with 3D view",
+      "ok": true,
+      "ms": 32233
+    },
+    {
+      "step": "compare alternative designs",
+      "ok": true,
+      "ms": 16205
+    },
+    {
+      "step": "AI recommendations page",
+      "ok": true,
+      "ms": 2450
+    },
+    {
+      "step": "generate engineering report",
+      "ok": true,
+      "ms": 16708
+    },
+    {
+      "step": "mobile layout renders (390 px)",
+      "ok": true,
+      "ms": 2514
+    }
+  ],
+  "errors": []
+}

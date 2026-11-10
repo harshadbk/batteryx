@@ -1,0 +1,21 @@
+{
+  "_note": "Seed data contains ONLY the illustrative example cell used by the stage-1 BatteryWeave prototype (src/model/defaults.js). It is NOT a real product. Add real cells via POST /api/v1/cells with data_status='datasheet' and a datasheet_ref. Fields the prototype did not define are deliberately left empty rather than invented.",
+  "cells": [
+    {
+      "id": "EXAMPLE-LFP-20AH",
+      "manufacturer": null,
+      "model": "Illustrative LFP prismatic example (stage-1 prototype)",
+      "chemistry": "LFP",
+      "form_factor": "prismatic",
+      "nominal_voltage_v": 3.2,
+      "capacity_ah": 20,
+      "internal_resistance_mohm": 8,
+      "max_charge_c_rate": 1.0,
+      "mass_kg": 0.45,
+      "volume_l": 0.5,
+      "data_status": "illustrative_example",
+      "datasheet_ref": null,
+      "notes": "Values copied from the BatteryWeave stage-1 prototype example. Not traceable to a manufacturer datasheet. max/min voltage, OCV curve, discharge limits, temperature window, dimensions, cycle life and cost are intentionally missing."
+    }
+  ]
+}

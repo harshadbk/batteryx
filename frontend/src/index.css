@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-slate-100 text-slate-800 font-sans; }
+  .num { font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  .panel { @apply bg-white border border-slate-200 rounded-lg shadow-panel; }
+  .label { @apply text-[11px] font-semibold uppercase tracking-wider text-slate-500; }
+  .unit { @apply font-mono text-[11px] text-slate-500; }
+  .input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-900 num
+           focus:border-volt-500 focus:outline-none focus:ring-2 focus:ring-volt-100 disabled:bg-slate-50 disabled:text-slate-400;
+  }
+  .btn { @apply inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors
+                disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-volt-300; }
+  .btn-primary { @apply btn bg-volt-600 text-white hover:bg-volt-700; }
+  .btn-secondary { @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50; }
+  .btn-ghost { @apply btn text-slate-600 hover:bg-slate-100; }
+  .btn-danger { @apply btn border border-red-200 bg-white text-red-700 hover:bg-red-50; }
+  .grid-bg {
+    background-image: linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* tooltip */
+.tip { position: relative; display: inline-flex; }
+.tip > .tip-body {
+  position: absolute; z-index: 50; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+  width: max-content; max-width: 280px; padding: 6px 8px; border-radius: 6px; background: #0b1220; color: #e2e8f0;
+  font-size: 12px; line-height: 1.4; font-weight: 400; text-transform: none; letter-spacing: 0;
+  opacity: 0; pointer-events: none; transition: opacity .12s;
+}
+.tip:hover > .tip-body, .tip:focus-within > .tip-body { opacity: 1; }
+
+/* markdown inside AI answers */
+.md p { margin: .35rem 0; }
+.md ul { list-style: disc; padding-left: 1.2rem; margin: .35rem 0; }
+.md ol { list-style: decimal; padding-left: 1.2rem; margin: .35rem 0; }
+.md table { border-collapse: collapse; margin: .5rem 0; font-size: 12px; }
+.md th, .md td { border: 1px solid #e2e8f0; padding: 3px 6px; text-align: left; vertical-align: top; }
+.md th { background: #f8fafc; }
+.md code { font-family: "IBM Plex Mono", monospace; font-size: 12px; background: #f1f5f9; padding: 0 3px; border-radius: 3px; }
+.md h1, .md h2, .md h3, .md h4 { font-weight: 600; margin: .6rem 0 .25rem; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+  .print-page { box-shadow: none !important; border: none !important; }
+  .print-break { break-before: page; }
+}
